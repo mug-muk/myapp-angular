@@ -1,0 +1,31 @@
+
+<button type="button" class="btn btn-success" (click)="gotoregister()">add record</button>
+
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Address</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = " let emp of emps">
+                <td>{{emp.No}}</td>
+                <td>{{emp.Name}}</td>
+                <td>{{emp.Address}}</td>
+                <td>
+                    <a routerLink="/edit/{{emp.No}}">Edit</a>
+                </td>
+
+                <td>
+                    <a routerLink="/delete/{{emp.No}}">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
